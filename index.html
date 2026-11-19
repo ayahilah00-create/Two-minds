@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff"><title>TWO MINDS · Grow Together</title>
+<link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="loginView" class="login-screen">
+ <section class="login-card">
+  <div class="logo-mark">⌁</div><div class="brand-name">TWO MINDS</div><div class="brand-tag">GROW TOGETHER</div>
+  <h1>Welcome back.</h1><p>One shared space for two minds.</p>
+  <form id="loginForm"><label for="person">Your profile</label><select id="person"><option>Rehan</option><option>Ubaid</option></select><label for="secret">Secret code</label><input id="secret" type="password" inputmode="numeric" placeholder="Enter your private code" required><button class="black-btn full">Log in <span>→</span></button><div id="loginError" class="error"></div></form>
+  <small class="secure-note">● PRIVATE SPACE · TWO MEMBERS ONLY</small>
+ </section>
+</div>
+<div id="appView" class="app hidden">
+ <aside class="sidebar">
+  <div class="brand"><div class="logo-mark">⌁</div><div class="brand-name">TWO MINDS</div><div class="brand-tag">GROW TOGETHER</div></div>
+  <nav id="sideNav">
+   <button class="nav active" data-page="home"><span>⌂</span>Dashboard</button>
+   <button class="nav" data-page="deen"><span>☾</span>Deen</button>
+   <button class="nav" data-page="books"><span>▤</span>Books</button>
+   <button class="nav" data-page="skills"><span>✧</span>Skills</button>
+   <button class="nav" data-page="business"><span>▣</span>Business</button>
+   <button class="nav" data-page="trading"><span>⌁</span>Trading</button>
+   <button class="nav" data-page="languages"><span>◎</span>Languages</button>
+   <button class="nav" data-page="fitness"><span>♧</span>Fitness</button>
+   <button class="nav" data-page="together"><span>♧</span>Together</button>
+   <button class="nav" data-page="settings"><span>⚙</span>Settings</button>
+  </nav>
+  <div class="sidebar-foot"><b>✦ Stay consistent</b><small>You're doing great!</small></div>
+ </aside>
+ <main class="main">
+  <header class="topbar"><div><div class="date-label" id="dateLabel"></div><h1 id="greeting">Assalamu Alaikum!</h1><p>Let's make today count, together.</p></div>
+   <div class="profile-area"><div class="profiles"><button class="profile active" id="meProfile"><span class="avatar">R</span><b>Rehan</b><small>(You)</small></button><button class="profile" id="ubaidProfile"><span class="avatar alt">U</span><b>Ubaid</b></button></div><div class="sync"><i></i><span id="connection">Connecting…</span></div><button id="logout" class="logout">Log out ↗</button></div>
+  </header>
+  <div id="pageContent"></div>
+  <footer>Two minds, one journey. <span>✦</span></footer>
+ </main>
+ <nav class="mobile-nav" id="mobileNav">
+  <button class="active" data-page="home"><span>⌂</span>Home</button><button data-page="deen"><span>☾</span>Deen</button><button data-page="books"><span>▤</span>Books</button><button data-page="fitness"><span>♧</span>Fitness</button><button data-page="together"><span>♧</span>Together</button>
+ </nav>
+</div>
+<script src="/socket.io/socket.io.js"></script><script src="/app.js"></script>
+</body></html>
